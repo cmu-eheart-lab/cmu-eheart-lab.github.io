@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap');
+/** COLORS
+
+Salmon: #ff4d4d;
+Pink: #ee1c4e;
+Gray: #484848;
+
+**/
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ee1c4e;
+}
+
+a:hover {
+    color: #484848;
+    cursor: pointer;
+}
+/*** HEADER **/
+nav a {
+    margin-right: 20px;
+    font-size: 15px;
+}
+
+nav .active {
+    color: #484848;
+}
+
+header {
+    background-color: #ffffff;
+    padding-top: 20px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 1000px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+#header-content {
+    padding-bottom: 10px;
+    margin-left: 30px;
+}
+
+nav {
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 35px;
+}
+
+#logo {
+    padding-top: 25px;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+h1 {
+    font-family: 'Lobster Two', cursive;
+    font-size: 36px;
+}
+
+h1 a {
+    color: black;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/*** CONTENT ***/
+#content-container {
+    padding-top: 10px;
+    margin: 0 auto;
+    width: 1200px;
+    text-align: center;
+}
+
+/*** TITLE ***/
+#lab-title h1 {
+    font-size: 40px;
+}
+
+#mission-statement {
+    font-size: 20px;
+}
+
+/*** ABOUT ***/
+#about h2 {
+    padding-bottom: 20px;
+}
+
+#about-photo {
+    display: inline-block;
+}
+
+#slider {
+    opacity:1;
+    transition: opacity 1s;
+}
+
+#slider.fadeOut {
+    opacity:0;
+}
+
+#about-description {
+    display: inline-block;
+    margin: 0 auto;
+    width: 500px;
+    margin-left: 30px;
+    text-align: justify;
+    vertical-align: top;
+    font-size: 10pt;
+    margin-top: -15px;
+}
+
+#about-photo-caption {
+    margin-top: 60px;
+    font-style: italic;
+    text-align: left;
+/*    border-top: 1px solid #ccc;*/
+}
+
+/*** PEOPLE ***/
+#people-container {
+    float: left;
+}
+
+.people-item-image-container img {
+    width: 250px;
+}
+
+.friend-item-image-container img {
+    width: 200px;
+}
+
+.faculty-item-image-container img {
+    display: inline-block;
+    width: 300px;
+}
+
+.friend-item {
+    display: inline-block;
+    width: 200px;
+    padding: 30px;
+    vertical-align: top;
+}
+
+.people-item {
+    display: inline-block;
+    width: 275px;
+    padding: 30px;
+    vertical-align: top;
+}
+
+.people-item-name {
+    font-weight: bold;
+    margin: 5px;
+}
+
+.people-item-web a {
+    color: #ff4d4d;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.people-item-descrip {
+    margin-top: 2px;
+    text-align: justify;
+    font-size: 12px;
+}
+
+.faculty-item-descrip-container {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 30px;
+    text-align: left;
+}
+
+.faculty-item-descrip-container a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+.faculty-item-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.faculty-item-web a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+.faculty-item-descrip {
+    width: 650px;
+    text-align: justify;
+}
+
+/*** PROJECTS ***/
+.project-item {
+    margin-bottom: 30px;
+}
+
+.project-item-image-container {
+    display: inline-block;
+}
+
+.project-item-image-container img {
+    width: 350px;
+}
+
+.project-item-info-box {
+    display: inline-block;
+    width: 600px;
+    text-align: justify;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.project-item-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+footer {
+    margin-top: 100px;
+}
+#cmu-logo {
+    margin-left: 61%;
+}
