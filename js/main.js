@@ -300,6 +300,63 @@ eheart.Faculty = {
   }
 }
 eheart.Students = {
+  'hana': {
+    'name': 'Hana Habib',
+    'img': 'hana.jpg',
+    'title': 'Post Doc',
+    'web': 'hanahabib.com',
+    'description': 'Hana is a Postdoctoral Researcher at the Collaboratory Against Hate, exploring design interventions informed by social psychology to combat the proliferation of hate on online forums. Previously, she was a PhD student in the Societal Computing program at Carnegie Mellon University, advised by Lorrie Faith Cranor. Her research studies people\'s behaviors and preferences when interacting with technology, focusing on issues that have societal impact such as security and privacy.',
+    'email': 'htq@andrew.cmu.edu',
+    'status': 'phd'
+  },
+  'adinawa': {
+    'name': 'Adinawa Adjagbodjou',
+    'img': 'adinawa.png',
+    'title': 'Ph.D. Student',
+    'web': '',
+    'description': 'Adinawa\’s research focuses on the design of digital and immersive technology in partnership with marginalized communities. Adinawa’s most recent research has focused on designing virtual reality to promote collaboration, equity, and creativity, as well as speculative design with Black community practitioners. Her current work is focused on understanding how immigrant learners approach language learning in order to collaboratively develop tools that balance empowerment and affirmed identity, emphasize cultural and community assets, and align with the context in which these individuals experience language exchanges.',
+    'email': 'aadjagbo@andrew.cmu.edu',
+    'status': 'phd'
+  },
+  'morgan': {
+    'name': 'Morgan Evans',
+    'img': 'morgan.jpeg',
+    'title': 'Ph.D. Student',
+    'web': 'https://morganevans.me/',
+    'description': 'Morgan Evans works on the design and evaluation of transformational game experiences. Her current research seeks to empower members of historically marginalized communities. In the past, she was a privacy researcher and earned a BA from Bard College. She loves to sing and spend time on skateboards and slacklines!',
+    'email': 'morganev@cs.cmu.edu',
+    'status': 'phd'
+  },
+  'lisa': {
+    'name': 'Lisa Egede',
+    'img': 'lisa.png',
+    'title': 'Ph.D. Student',
+    'web': 'http://www.lisaegede.com/',
+    'description': 'Lisa\’s research interests primarily center around understanding disparities marginalized communities face across various domains (e.g. major political events). She examines how their health and well-being is impacted and co-designs with communities to generate solutions. In her free time, she enjoys making Spotify playlists, watching reality TV, riding her bike and photography!',
+    'email': 'legede@cs.cmu.edu',
+    'status': 'phd'
+  },
+  'pranav': {
+    'name': 'Pranav Khadpe',
+    'img': 'pranav.jpg',
+    'title': 'Ph.D. Student',
+    'web': 'https://pranavkhadpe.github.io/',
+    'description': 'Pranav\'s research develops blends of interaction technologies and social processes to improve how people connect, collaborate, and innovate. He graduated from IIT Kharagpur with a B.Tech and M.Tech in Electrical Engineering. Outside of work, he likes running, boardgames, and good satire.',
+    'email': 'pkhadpe@cs.cmu.edu',
+    'status': 'phd'
+  },
+  'erica': {
+    'name': 'Erica Principe Cruz',
+    'img': 'erica-2.jpg',
+    'title': 'Ph.D. Student',
+    'web': 'https://eripricru.wixsite.com/playfulresistance',
+    'description': 'Erica Principe Cruz is an Achievement Rewards for College Scientists Scholar, Generation Google Women in Gaming Scholar, and PhD Student in the Human-Computer Interaction Institute at Carnegie Mellon University, where she studies how digital games and immersive technology experiences can be designed to empower marginalized communities. She investigates and designs computer-mediated play as a potential tool for practicing playful resistance as personal methods of combating oppression. Erica also designs and studies countercultures and counterspaces within academic research meant to support the joy and rest of her communities. Previously, she earned her BA in Interdisciplinary Computing and the Arts at the University of California San Diego after earning her AA in Computer Animation at Antelope Valley College. When she is not busy working towards her PhD in HCI, she can be found at the park with her dog or playing all kinds of games.',
+    'email': 'ecruz@cs.cmu.edu',
+    'status': 'phd'
+  }
+}
+
+eheart.Alumni = {
   'alexandra': {
     'name': 'Alexandra To',
     'img': 'alexandra-square.png',
@@ -329,18 +386,6 @@ eheart.Students = {
     'email': 'jseering@cs.cmu.edu',
     'status': 'phd'
   },
-  'erica': {
-    'name': 'Erica Cruz',
-    'img': 'erica-1.jpg',
-    'title': 'Ph.D. Student',
-    'web': 'https://eripricru.wixsite.com/cmuhciiphdportfolio',
-    'description': 'Erica Cruz develops computer-mediated games and immersive experiences with the intent to empower marginalized communities. She earned her BA in Interdisciplinary Computing and the Arts at the University of California San Diego after earning her AA in Computer Animation at Antelope Valley College. When she is not busy working towards her PhD in HCI, she can be found at the park with her dog or playing Legend of Zelda games.',
-    'email': 'ecruz@cs.cmu.edu',
-    'status': 'phd'
-  }
-}
-
-eheart.Alumni = {
   'anna': {
     'name': 'Anna Kasunic',
     'img': 'anna-square.png',
