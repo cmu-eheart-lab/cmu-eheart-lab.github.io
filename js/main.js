@@ -96,6 +96,9 @@ var about_html = '\
   </div>';
 
 var people_html = '\
+    <div class="group-photo-image-container"> \
+      <img src="img/group-photo.png"></img> \
+    </div> \
     <% _.each(faculty, function(person) { %> \
     <div class="people-item"> \
       <div class="people-item-image-container">\

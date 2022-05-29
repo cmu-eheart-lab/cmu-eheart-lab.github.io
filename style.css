@@ -137,6 +137,11 @@ h2 {
     width: 250px;
 }
 
+.group-photo-image-container img {
+    width: 1005px;
+    margin-bottom: 40px;
+}
+
 .friend-item-image-container img {
     width: 200px;
 }
