@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>d3.set.values() Function</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <script src="https://kit.fontawesome.com/54956bc9e9.js" crossorigin="anonymous"></script>
+
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-light sticky-top bg-white" style="margin-bottom: 5vh;">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/lab-logo-bl.png" width="300" class="d-inline-block align-top" alt="" />
+                </a>
+                <div class="justify-content-end">
+                    <a href="./index.html#mission" class="btn btn-outline-secondary me-2" role="button">About</a>
+                    <a href="./index.html#people" class="btn btn-outline-secondary me-2" role="button">People</a>
+                    <a href="./index.html#projects" class="btn btn-outline-secondary me-2" role="button">Projects</a>
+                    <a href="./pubs.html" class="btn btn-secondary me-2" role="button">Publications</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                        <nav class="nav nav-pills flex-column" id="years"
+                            style="--bs-nav-pills-link-active-bg: #fe2c54; --bs-nav-link-color:#fe2c54;">
+                        </nav>
+                    </nav>
+                </div>
+                <div class="col-md-10">
+                    <div id="publications" data-bs-spy="scroll" data-bs-target="#years" data-bs-smooth-scroll="true"
+                        style="height: 70vh; overflow: scroll;"></div>
+                </div>
+            </div>
+        </div>
+        <footer style="height:20vh; background: #666666;
+    background-image: url(bg-seal.png);
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: 10px;
+    background-size: 500px;">
+            <div class="container">
+                <div class="row" style="padding-top: 40px;;">
+                    <div class="col-md-6">
+                        <div style="color: white;">
+                            Hello from Pittsburgh!
+                            <!-- <a href="/team" class="link white dim underline">Come join us!</a> -->
+                        </div>
+                        <div style="color: white;">
+                            Our lab is at RAND Corporation 4570 Fifth Ave.
+                        </div>
+                        <div>
+                            <abbr title="Last build on 2022-11-20"
+                                style="color: white; text-underline-position: under">November
+                                2022</abbr>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p style="color: white; font-weight: 500;">Links</p>
+                        <ul style="color: white; list-style: none;padding: 0;">
+                            <li>
+                                <a href="https://hcii.cmu.edu"
+                                    style="color: white; text-decoration: none;">Human-Computer Interaction
+                                    Institute</a>
+                            </li>
+                            <li>
+                                <a href="https://www.cs.cmu.edu" style="color: white; text-decoration: none;">School of
+                                    Computer
+                                    Science</a>
+                            </li>
+                            <li>
+                                <a href="https://www.cmu.edu" style="color: white; text-decoration: none;">Carnegie
+                                    Mellon
+                                    University</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+            integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+            crossorigin="anonymous"></script>
+        <script>
+
+            // Initialising an array
+            const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTisbAx_r31sspf308dsOJxatfzQZhkx8Wxns1Faqu7DWPgjPTI-zBaR6QEgca4NnM2u8hSHwQdhs-Z/pub?gid=0&single=true&output=csv"
+            var data = d3.csv(url);
+            data.then(function (data) {
+                console.log(data);
+                var year = new Set(data.map(row => row.Year));
+                var years_array = data.map(row => row.Year);
+                console.log(year);
+                var years_list = Array.from(new Set(data.map(row => row.Year)));
+                d3.select("#publications")
+                    .selectAll("div")
+                    .data(years_list)
+                    .enter().append("div")
+                    .attr("id", function (d) { return "Y" + d; }).append("h3").text(d => d);
+                years_list.forEach(function (current_year) {
+                    function fetchYearData(year) {
+                        return function (element) {
+                            return element.Year == year;
+                        }
+                    }
+                    year_papers = data.filter(fetchYearData(current_year));
+                    var publications = d3.select("#Y" + current_year).selectAll("div").data(year_papers).enter().append("div").attr("id", function (d, i) {
+                        if (i == years_array.indexOf(d.Year)) {
+                            return "P" + d.Year + 1;
+                        }
+                        else {
+                            return "P" + d.Year + (i + 1);
+                        }
+                    });
+                    publications.append("p").style("margin", "0px").append("a").style("color", "#fe2c54").style("text-decoration", "none").attr("href", d => d.Link).text(d => d.Title);
+                    publications.append("p").style("margin", "0px").text(d => d.Authors);
+                    publications.append("p").text(d => d.Venue + " " + d.Year);
+                });
+                d3.select("#years")
+                    .selectAll("a")
+                    .data(year)
+                    .enter().append("a")
+                    .classed("nav-link", true)
+                    .attr("href", function (d) { return "#Y" + d; })
+                    .text(d => d);
+
+                const target = document.querySelector('#publications').getAttribute('data-bs-target');
+                console.log(target);
+                const scrollElem = document.querySelector(`[data-bs-spy="scroll"]`);
+                console.log(scrollElem);
+                bootstrap.ScrollSpy.getOrCreateInstance(scrollElem).refresh();
+            });
+        </script>
+    </body>
+
+</html>

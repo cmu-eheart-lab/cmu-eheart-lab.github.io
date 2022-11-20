@@ -1,50 +1,420 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>eHeart Lab</title>
-        <!--STYLES-->
-        <link rel="stylesheet" href="style.css" type="text/css" />
-        <!--FONTS-->
-        <link href='https://fonts.googleapis.com/css?family=Abel|Lobster+Two' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Titillium+Web:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-        <!--JAVASCRIPT-->
-        <script src="js/jquery-3.0.0.min.js" type="text/javascript"></script>
-        <script src="js/underscore-min.js" type="text/javascript"></script>
-        <script src="js/backbone-min.js" type="text/javascript"></script>
-    </head>
-    <body>
-        <div id="container">
-            <header>
-                <div id="header-content">
-                    <div id="logo">
-                        <a href=""><img src="img/lab-logo-bl.png" width="300" /></a>
-                    </div>
-                    <nav>
-                        <a href="#about" class="navlink">ABOUT</a>
-                        <a href="#people" class="navlink">PEOPLE</a>
-                        <a href="#projects" class="navlink">PROJECTS</a>
-<!--                         <a href="#projects" class="navlink">PUBLICATIONS</a>
-                        <a href="#projects" class="navlink">GET INVOLVED</a> -->
-                    </nav>
-                </div>
-            </header>
+<!doctype html>
+<html lang="en">
 
-            <section id="content-container">
-                <div id="content">
-                <!--Mission Statement-->
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-                <!--Lab Members-->
-                <!--Projects-->
-                </div>
-            </section>
+    <!-- Bootstrap CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="https://kit.fontawesome.com/54956bc9e9.js" crossorigin="anonymous"></script>
+    <title>eHeart Lab</title>
+  </head>
 
-            <script src="js/main.js" type="text/javascript"></script>
-
-            <footer>
-<!--                 <div id="cmu-logo">
-                    <img src="img/cmu-hcii-logo.png" width="300px" />
-                </div> -->
-            </footer>
+  <body>
+    <nav class="navbar navbar-light sticky-top bg-white" style="margin-bottom: 5vh;">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="img/lab-logo-bl.png" width="300" class="d-inline-block align-top" alt="" />
+        </a>
+        <div class="justify-content-end">
+          <a href="#mission" class="btn btn-outline-secondary me-2" role="button">About</a>
+          <a href="#people" class="btn btn-outline-secondary me-2" role="button">People</a>
+          <a href="#projects" class="btn btn-outline-secondary me-2" role="button">Projects</a>
+          <a href="./pubs.html" class="btn btn-outline-secondary me-2" role="button">Publications</a>
         </div>
-    </body>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row" id="mission">
+        <div class="col-md-7"
+          style="padding-right: 40px; color: black; font-size: large; padding-top: 10px; padding-left: 20px;">
+          <h3>Mission Statement</h3>
+          <p style="margin-top: 20px;">We are a research group at the Human-Computer Interaction Institute at Carnegie
+            Mellon University. We
+            study and design interactive technologies, games, and social computing systems to empower
+            transformative experiences for individuals and their communities.
+            Our cross-disciplinary approach blends theories and methods from psychology, design, and computer
+            science.
+            We seek to reimagine technologies and systems that promote empathy, self-expression, agency, and joy,
+            especially for historically marginalized groups.
+            We believe that new technologies, when designed with both mind and heart, can improve
+            communication, collaboration, and conscientiousness.Playful technologies engage hearts and minds,
+            preserve a sense of delight, and afford
+            new ways of expressing ourselves and interacting with others.</p>
+        </div>
+        <div class=" col-md-5">
+          <div class="img-wrapper" style="display: inline-block; overflow: hidden; border-radius: 5px;">
+            <div class="frame" style="
+              vertical-align: middle;
+              text-align: center;
+              display: table-cell;">
+              <img src="img/group-photo.png" class="img-fluid" alt="..." style="transform:scale(1.75);
+              -ms-transform:scale(1.75); /* IE 9 */
+              -moz-transform:scale(1.75); /* Firefox */
+              -webkit-transform:scale(1.75); /* Safari and Chrome */
+              -o-transform:scale(1.75);">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <hr>
+      </hr>
+      <div class="row" style="margin-top: 40px;" id="people">
+        <h3>People</h3>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-12">
+          <div class="card" style="margin-top: 20px;">
+            <div class="row">
+              <div class="col-sm-3">
+                <img src="img/geoff-square.png" class="card-img-top" style="height: 300px; object-fit: cover;"
+                  alt="...">
+              </div>
+              <div class="col-sm-9 d-flex align-items-center">
+                <div>
+                  <h5 class="card-title">Geoff Kaufman</h5>
+                  <p class="card-text">Principal Investigator</p>
+                  <p class="card-text">Geoff Kaufman is the founder of the eHeart Lab and an Assistant Professor in the
+                    Human-Computer Interaction Institute at Carnegie Mellon. He holds a Ph.D. and M.A. in social
+                    psychology
+                    from Ohio State University, and a B.A. in psychology from Carnegie Mellon University. Prior to
+                    joining
+                    the faculty in the HCII in 2015, Geoff was a postdoctoral researcher at Tiltfactor, a game design
+                    and
+                    research laboratory at Dartmouth College. His primary research focuses on how experience-taking -
+                    the
+                    mental simulation of characters experiences in fictional narratives, virtual worlds, or games - can
+                    change individuals' self-concepts, attitudes, behaviors, and emotions. This work has led to new
+                    insights
+                    regarding user-specific, design-specific, and situational variables that increase the impact of
+                    stories,
+                    games, and mediated interactions, and a set of empirically validated techniques and best practices
+                    for
+                    the creation of playful interventions for social change. His personal 500+ board game collection
+                    both
+                    informs and provides a regular distraction from his academic pursuits.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body d-flex justify-content-center">
+              <a href=" #" class="card-link"><i class="fa-solid fa-house-chimney fa-lg"></i></a>
+              <a href="#" class="card-link"><i class="fa-solid fa-envelope fa-lg"></i></a>
+              <a href="#" class="card-link"><i class="fa-brands fa-twitter fa-lg"></i></a>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="margin-top: 20px;">
+            <img src="img/hana.jpg" class="card-img-top" style="height: 300px; object-fit: cover;" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Hana Habib</h5>
+              <p class="card-text">Postdoc</p>
+              <p class="card-text">Hana is a Postdoctoral Researcher at the Collaboratory Against Hate working with
+                Geoff Kaufman to explore design interventions informed by social psychology that could combat the
+                proliferation of hate on online forums. Previously, she was a PhD student in the Societal Computing
+                program at Carnegie Mellon University, advised by Lorrie Faith Cranor. Her research studies people's
+                behaviors and preferences when interacting with technology, focusing on issues that have societal impact
+                such as security and privacy.
+
+                Prior to starting her PhD, she completed a Bachelors in Computer Science and Electrical & Computer
+                Engineering from Cornell University and a Masters in Information Technology - Information Security from
+                Carnegie Mellon University. She has also worked as a software engineer for the U.S. Department of
+                Defense.
+              </p>
+            </div>
+            <div class="card-body">
+              <a href="https://www.hanahabib.com/" class="card-link"><i class="fa-solid fa-house-chimney fa-lg"></i></a>
+              <a href="mailto:htq@andrew.cmu.edu" class="card-link"><i class="fa-solid fa-envelope fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="margin-top: 20px;">
+            <img src="img/adinawa.png" class="card-img-top" style="height: 300px; object-fit: cover;" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Adinawa Adjagbodjou</h5>
+              <p class="card-text">PhD Student</p>
+              <p>Adinawa Adjagbodjou is a Ph.D. student in Human-Computer Interaction at Carnegie Mellon University
+                focusing on the design of digital and immersive technology in partnership with marginalized communities.
+                Adinawa’s most recent research has focused on designing virtual reality to promote collaboration,
+                equity, and creativity, as well as speculative design with Black community practitioners. Her current
+                work is focused on understanding how immigrant learners approach language learning in order to
+                collaboratively develop tools that balance empowerment and affirmed identity, emphasize cultural and
+                community assets, and align with the context in which these individuals experience language exchanges.
+              </p>
+            </div>
+            <div class="card-body">
+              <a href="https://www.linkedin.com/in/aadjagbodjou/" class="card-link"><i
+                  class="fa-solid fa-house-chimney fa-lg"></i></a>
+              <a href="mailto:aadjagbo@andrew.cmu.edu" class="card-link"><i class="fa-solid fa-envelope fa-lg"></i></a>
+              <a href="https://twitter.com/adinawa_a" class="card-link"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="margin-top: 20px;">
+            <img src="img/morgan.jpeg" class="card-img-top" style="height: 300px; object-fit: cover;" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Morgan Evans</h5>
+              <p class="card-text">PhD Student</p>
+              <p>Morgan Evans works on the design and evaluation of transformational game experiences. Her current
+                research seeks to empower members of historically marginalized communities. In the past, she was a
+                privacy researcher and earned a BA from Bard College. She loves to sing and spend time on skateboards
+                and slacklines! </p>
+            </div>
+            <div class="card-body">
+              <a href="https://morganevans.me/" class="card-link"><i class="fa-solid fa-house-chimney fa-lg"></i></a>
+              <a href="mailto:morganev@cs.cmu.edu" class="card-link"><i class="fa-solid fa-envelope fa-lg"></i></a>
+              <a href="https://twitter.com/mcevns" class="card-link"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="margin-top: 20px;">
+            <img src="img/lisa.png" class="card-img-top" style="height: 300px; object-fit: cover;" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Lisa Egede</h5>
+              <p class="card-text">PhD Student</p>
+              <p>Lisa's research interests primarily center around understanding disparities marginalized communities
+                face across various domains (e.g. major political events). She's interested in looking at how their
+                health and well-being is impacted and co-designing with communities to generate solutions. In the past
+                she has done research working with industry practitioners to understand their needs for support as it
+                relates to assessing fairness related harms. She is currently collaborating with researchers at various
+                institutions on the Tech4BlackLives project; a study centered around understanding how Black developers
+                and technologists have created tools to support the lived experiences of Black people.
+                In her free time she enjoys making Spotify playlists, watching reality TV, riding her bike and
+                photography!"</p>
+            </div>
+            <div class="card-body">
+              <a href="http://www.lisaegede.com/" class="card-link"><i class="fa-solid fa-house-chimney fa-lg"></i></a>
+              <a href="mailto:legede@cs.cmu.edu" class="card-link"><i class="fa-solid fa-envelope fa-lg"></i></a>
+              <a href="https://twitter.com/lisaegede" class="card-link"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="margin-top: 20px;">
+            <img src="img/pranav.jpg" class="card-img-top" style="height: 300px; object-fit: cover;" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pranav Khadpe</h5>
+              <p class="card-text">PhD Student</p>
+              <p>Pranav is a third year PhD student in the Human-Computer Interaction Institute at Carnegie Mellon
+                University, where he is co-advised by Chinmay Kulkarni and Geoff Kaufman. He combines system-building,
+                empirical methods, and theoretical approaches to study, design and build design participation
+                architectures for internet-based collaboration efforts like Wikipedia and Open source projects. By doing
+                so, he seek to understand how we might architect production efforts that become arenas for collective
+                creativity, self-development, and co-creation and sharing of value. He graduated from IIT Kharagpur with
+                a B.Tech and M.Tech in
+                Electrical Engineering. Outside of work, he likes running, boardgames, and good satire.</p>
+            </div>
+            <div class="card-body">
+              <a href="https://pranavkhadpe.github.io/" class="card-link"><i
+                  class="fa-solid fa-house-chimney fa-lg"></i></a>
+              <a href="mailto:pkhadpe@cs.cmu.edu" class="card-link"><i class="fa-solid fa-envelope fa-lg"></i></a>
+              <a href="https://twitter.com/PranavKhadpe" class="card-link"><i
+                  class="fa-brands fa-twitter fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="margin-top: 20px;">
+            <img src="img/erica-2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Erica Principe Cruz</h5>
+              <p class="card-text">PhD Student</p>
+              <p>Erica Principe Cruz is an Achievement Rewards for College Scientists Scholar, Generation Google Women
+                in Gaming Scholar, and PhD Student in the Human-Computer Interaction Institute at Carnegie Mellon
+                University, where she studies how digital games and immersive technology experiences can be designed to
+                empower marginalized communities. She investigates and designs computer-mediated play as a potential
+                tool for practicing playful resistance as personal methods of combating oppression. Erica also designs
+                and studies countercultures and counterspaces within academic research meant to support the joy and rest
+                of her communities. Previously, she earned her BA in Interdisciplinary Computing and the Arts at the
+                University of California San Diego after earning her AA in Computer Animation at Antelope Valley
+                College. When she is not busy working towards her PhD in HCI, she can be found at the park with her dog
+                or playing all kinds of games.</p>
+            </div>
+            <div class="card-body">
+              <a href="https://eripricru.wixsite.com/playfulresistance" class="card-link"><i
+                  class="fa-solid fa-house-chimney fa-lg"></i></a>
+              <a href="mailto:ecruz@cs.cmu.edu" class="card-link"><i class="fa-solid fa-envelope fa-lg"></i></a>
+              <a href="https://twitter.com/eripricru" class="card-link"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="margin-top: 20px;">
+            <img src="img/kimi_portrait.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Kimi Wenzel</h5>
+              <p class="card-text">PhD Student</p>
+              <p>Kimi leverages behavioral science and experimental psychology to minimize social disparities in
+                technology. Her current work focuses specifically on bias in language technology. She earned her B.A.
+                from Columbia University, Barnard College. Outside of the lab, she loves hosting dinner parties,
+                practicing yoga, and boxing.</p>
+            </div>
+            <div class="card-body">
+              <a href="https://kimiwenzel.com/" class="card-link"><i class="fa-solid fa-house-chimney fa-lg"></i></a>
+              <a href="mailto:kwenzel@cs.cmu.edu" class="card-link"><i class="fa-solid fa-envelope fa-lg"></i></a>
+              <a href="https://twitter.com/kimiwenzel" class="card-link"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      </hr>
+      <div class="row" style="margin-top: 40px;" id="projects">
+        <h3>Active Projects</h3>
+      </div>
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/counterspace-games.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Counterspace Games for BIWOC STEM Students</h5>
+              <p class="card-text">Erica Principe Cruz, Jessica Hammer, Geoff Kaufman</p>
+              <p class="card-text">Counterspace is an exploratory research project that explores how to create digital
+                games that function as counterspaces for Black, Indigenous, and other Women of Color (BIWOC) studying
+                STEM. BIWOC are underrepresented in STEM, and as such, they often feel a weaker sense of belonging and
+                face higher rates of attrition. This project aims to help combat dominant STEM culture by playfully
+                cultivating a sense of belonging and persistence through digital game design and playful interactions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/tech4blacklives.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Tech4BlackLives Project</h5>
+              <p class="card-text">Lisa Egede, Dr. Denae Ford Robinson, Dr. Brittany Johnson, Dr. Christina Harrington,
+                Leslie Coney</p>
+              <p class="card-text">The purpose of this project is to understand how Black and ally software developers,
+                technologists, and community organizers have used, created, or curated resources to support the
+                experiences of Black people. By using a mixed methodology approach of semi-structured interviews,
+                surveys, and quantitative analysis, we seek to understand the motivations behind building these
+                resources and tools, its impact on the community, and where there may be opportunities for how this
+                specific group can be supported. Our goal is to understand and effectively communicate the impact this
+                group of technologists has had on society.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/online-hate.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Interventions for Combating Online Hate</h5>
+              <p class="card-text">Hana Habib, Likhitha Chintareddy, Geoff Kaufman</p>
+              <p class="card-text">We are evaluating values-based interventions as a means of reducing prejudicial and
+                hateful speech in online discourse.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/Nooks-pull-figure - Pranav Khadpe.svg" style="height: 190px; object-fit: cover;"
+              class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Nooks</h5>
+              <p class="card-text">Shreya Bali, Pranav Khadpe, Geoff Kaufman, Chinmay Kulkarni</p>
+              <p class="card-text">Nooks is a Slack App designed to help people form lasting connections, across their
+                organization. Nooks achieves this by allowing people to "bump into" like-minded people regularly, by
+                providing them tools to spark and join conversations around topics of shared interested</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/Language-technologies.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Understanding the Effects of Bias in Language Technologies</h5>
+              <p class="card-text">Kimi Wenzel and Geoff Kaufman</p>
+              <p class="card-text">Language technologies have demonstrated a consistent bias against users of various
+                vernaculars and accents, however little work has been done to understand what effect this bias has on
+                users themselves. Through a series of qualitative and quantitative studies, we are measuring the
+                psychological impact of bias in speech-recognition and text-recognition systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </ul>
+
+    </div>
+    <footer style="height:258px; background: #666666;
+    background-image: url(bg-seal.png);
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: 10px;
+    background-size: 500px;">
+      <div class="container">
+        <div class="row" style="padding-top: 40px;;">
+          <div class="col-md-6">
+            <div style="color: white;">
+              Hello from Pittsburgh!
+              <!-- <a href="/team" class="link white dim underline">Come join us!</a> -->
+            </div>
+            <div style="color: white;">
+              Our lab is at RAND Corporation 4570 Fifth Ave.
+            </div>
+            <div>
+              <abbr title="Last build on 2022-11-20" style="color: white; text-underline-position: under">November
+                2022</abbr>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <p style="color: white; font-weight: 500;">Links</p>
+            <ul style="color: white; list-style: none;padding: 0;">
+              <li>
+                <a href="https://hcii.cmu.edu" style="color: white; text-decoration: none;">Human-Computer Interaction
+                  Institute</a>
+              </li>
+              <li>
+                <a href="https://www.cs.cmu.edu" style="color: white; text-decoration: none;">School of Computer
+                  Science</a>
+              </li>
+              <li>
+                <a href="https://www.cmu.edu" style="color: white; text-decoration: none;">Carnegie Mellon
+                  University</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
+
+  </body>
+
 </html>
